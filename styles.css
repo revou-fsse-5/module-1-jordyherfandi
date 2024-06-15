@@ -52,6 +52,7 @@ header h1 {
 header .tagline {
     font-size: 1.2em;
     margin-top: 0.5em;
+    padding: 0 1em;
 }
 
 main {
