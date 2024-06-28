@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Care Form</title>
+    <title>Skinvestment - Your Skin, your investment</title>
+    <link rel="icon" href="images/favicon.webp" type="image/webp">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
-            </ul>
-        </nav>
-        <h1>Rekomendasi Skincare</h1>
-        <p class="tagline">Temukan produk skincare dengan ingredient yang sesuai dengan tipe dan permasalahan kulitmu</p>
+        <div class="header-content">
+            <h1>Skinvestment</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="introduction">
             <h2>Tentang Website Ini</h2>
             <p>Website ini dibuat untuk membantu kamu menemukan ingredient skincare yang paling sesuai dalam produk skincare yang dipersonalisasi untuk tipe dan permasalahan kulitmu.</p>
-            <img src="images/visualisation.webp" alt="Visualisasi Skincare" class="visualization">
+            <picture>
+                <source srcset="images/visualisation-large.webp" media="(min-width: 800px)">
+                <source srcset="images/visualisation-medium.webp" media="(min-width: 600px)">
+                <img src="images/visualisation.webp" alt="Visualisasi Skincare" class="visualization">
+            </picture>
         </section>
         <form action="" method="get">
+            <h2>Temukan Produk Skincare sesuai tipe kulitmu</h2>
             <section class="contact">
                 <fieldset>
                     <legend>Informasi Kontak</legend>
@@ -52,7 +60,7 @@
                     <legend>Pilih tipe kulitmu</legend>
                     <label for="normal">
                         <input type="radio" id="normal" name="skin_type" value="normal" required>
-                        <img src="images/normal_skin.png" alt="Normal Skin" >
+                        <img src="images/normal_skin.png" alt="Normal Skin">
                         Normal - Kulit yang tidak terlalu berminyak atau kering
                     </label>
                     
@@ -133,8 +141,40 @@
                 </fieldset>
             </section>
             
-            <button type="submit">Submit</button>
+            <div class="button-container">
+                <button type="submit" class="button">Submit</button>
+            </div>
         </form>
+
+        <section class="active-ingredients fade-in">
+            <h2>Bahan Aktif Terbaik</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/niacinamide.webp" alt="Niacinamide">
+                    <p>Niacinamide</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/retinol.webp" alt="Retinol">
+                    <p>Retinol</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/copper_peptide.webp" alt="Copper Peptide">
+                    <p>Copper Peptide</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/vitamin_c.webp" alt="Vitamin C">
+                    <p>Vitamin C</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/hyaluronic_acid.webp" alt="Hyaluronic Acid">
+                    <p>Hyaluronic Acid</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/salicylic_acid.webp" alt="Salicylic Acid">
+                    <p>Salicylic Acid</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Skinvestment. All rights reserved.</p>
